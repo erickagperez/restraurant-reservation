@@ -3,7 +3,7 @@ import { setReservationStatus } from "../utils/api";
 
 function ReservationsTableButtons({
   reservation,
-  loadReservations,
+  loadDashboard,
   setError,
 }) {
   function SeatButton({ reservation_id, status }) {
@@ -85,7 +85,7 @@ function ReservationsTableButtons({
       const abortController = new AbortController();
       setError(null);
       setReservationStatus(reservation_id, "cancelled", abortController.signal)
-        .then(() => loadReservations())
+        .then(() => loadDashboard())
         .catch(setError);
       return () => abortController.abort();
     }

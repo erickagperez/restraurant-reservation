@@ -115,7 +115,7 @@ function ReservationForm({ reservation, setReservation }) {
         </div>
       </div>
       <div className="mt-4 d-grid gap-3 d-flex justify-content-end pr-3">
-        <button type="button" className="btn btn-danger" onClick={cancelHandler}>
+        <button type="button" className="btn btn-danger mr-3" onClick={cancelHandler}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

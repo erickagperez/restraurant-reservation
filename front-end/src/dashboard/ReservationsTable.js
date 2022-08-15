@@ -4,7 +4,7 @@ import { formatAsTime } from "../utils/date-time";
 import ErrorAlert from "../layout/ErrorAlert";
 import ReservationsTableButtons from "./ReservationsTableButtons";
 
-function ReservationsTable({ reservations, setReservations }) {
+function ReservationsTable({ reservations, loadDashboard }) {
   const location = useLocation();
   const [error, setError] = useState(null);
 
@@ -28,7 +28,7 @@ function ReservationsTable({ reservations, setReservations }) {
         <td>{reservation.people}</td>
         {<ReservationsTableButtons
           reservation={reservation}
-          setReservations={setReservations}
+          loadDashboard={loadDashboard}
           setError={setError}
         />}
       </tr>
